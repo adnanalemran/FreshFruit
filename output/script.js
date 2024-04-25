@@ -18,3 +18,5 @@ let person = {
     inDevloper: true,
 };
 //Explicit & Union Types
+let a = [];
+a.push("this an string");

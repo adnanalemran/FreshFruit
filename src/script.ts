@@ -2,7 +2,7 @@
 function mult(a: number, b: number) {
   return a * b;
 }
-console.log(mult(3, 4));
+// console.log(mult(3, 4));
 
 //array
 let fruits = ["apple", "banna", "orange"];
@@ -13,7 +13,7 @@ let fruits = ["apple", "banna", "orange"];
 // this work
 fruits.push("wood-apple");
 
-console.log(fruits);
+// console.log(fruits);
 
 //object
 
@@ -22,5 +22,7 @@ let person = {
   age: 23,
   inDevloper: true,
 };
+
+ //Explicit & Union Types
 
  

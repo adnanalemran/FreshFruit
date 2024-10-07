@@ -1,7 +1,6 @@
 //basic data type
 
 //string
-
 let firstName: string = "adnan";
 //number
 let roll: number = 123;
@@ -14,6 +13,7 @@ let y: null = null;
 //any
 let d: any;
 d = 123;
+
 //none primitive data type
 //array string
 let friends: string[] = ["ali", "ahmed", "umer"];

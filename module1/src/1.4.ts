@@ -1,0 +1,3 @@
+//basic data type
+
+//string

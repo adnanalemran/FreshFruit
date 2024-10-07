@@ -1,66 +1,32 @@
-//function  learning in ts
+{
+  //function  learning in ts
 
-//normal function
-function add(a: number, b: number): number {
-  return a + b;
-}
-
-// use add
-const sum = add(2, 3);
-
-//Arrow function
-const addArrow = (a: number, b: number): number => a + b;
-
-//function with default parameter
-function greet(name: string = "adnan"): string {
-  return `Hello ${name}`;
-}
-
-//function with optional parameter
-function greetOptional(name?: string): string {
-  return `Hello ${name}`;
-}
-
-//function with rest parameter
-function greetRest(name: string, ...restNames: string[]): string {
-  return `Hello ${name} ${restNames.join(" ")}`;
-}
-
-//function with overloading
-function greetOverload(name: string): string;
-function greetOverload(age: number): string;
-function greetOverload(name: string, age: number): string;
-function greetOverload(nameOrAge: string | number, age?: number): string {
-  if (typeof nameOrAge === "string") {
-    return `Hello ${nameOrAge}`;
-  } else if (typeof nameOrAge === "number") {
-    return `Hello ${nameOrAge}`;
-  } else {
-    return `Hello ${nameOrAge} ${age}`;
+  //normal function
+  function add(a: number, b: number = 10): number {
+    //default parameter
+    return a + b;
   }
-}
 
-//function with callback
-function greetCallback(name: string, callback: (name: string) => void): void {
-  callback(name);
-}
+  // use add
+  const sum = add(2, 3);
 
-//function with generic
-function greetGeneric<T>(name: T): T {
-  return name;
-}
+  //Arrow function
+  const addArrow = (a: number, b: number): number => a + b;
 
-//function with generic array
-function greetGenericArray<T>(name: T[]): T[] {
-  return name;
-}
+  //object --> function --> method
 
-//function with generic object
-function greetGenericObject<T>(name: T): T {
-  return name;
-}
+  //its a method
+  const poorUser = {
+    name: "adnan",
+    balance: 1000,
+    addBalance(amount: number): string {
+      return `My new balance is ${this.balance + amount}  `;
+    },
+  };
 
-//function with generic constraint
-function greetGenericConstraint<T extends string>(name: T): T {
-  return name;
+  // Declare an array of numbers from 1 to 10
+  const arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  // Create a new array by squaring each element of the original array
+  const newArr: number[] = arr.map((item: number): number => item * item);
 }

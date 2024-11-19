@@ -51,21 +51,21 @@ const ProductView = () => {
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className="bg-slate-200 rounded-lg shadow-lg p-4 hover:shadow-xl transition-all duration-300"
+                            className="bg-white rounded-lg   p-4 hover:shadow-xl transition-all duration-300"
                         >
                             <img
                                 src={`${ImageUrl}${product?.image}`}
                                 alt={product?.name}
-                                className="w-full h-48 object-cover rounded-t-lg mb-4"
+                                className="w-full h-32 object-contain bg-white rounded-t-lg mb-4"
                             />
-                            <h2 className="text-xl font-semibold text-gray-800 mb-2">{product?.name}</h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                                {product?.description.split(' ').slice(0, 15).join(' ')}...
+                            <h2 className="text-xl font-semibold  text-center mb-2">{product?.name}</h2>
+                            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 text-center">
+                                {product?.description.split(' ').slice(0, 6).join(' ')}...
                             </p>
-                            <p className="text-lg font-semibold text-blue-600">${parseFloat(product?.price).toFixed(2)}</p>
+                            <p className="text-base font-semibold text-center">  ${parseFloat(product?.price).toFixed(2)}</p>
                             <button
                                 onClick={() => handleAddToCart(product)}
-                                className="mt-4 w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
+                                className="mt-4 w-full py-2 bg-primary text-white font-semibold rounded-md hover:bg-red-500 transition duration-300"
                             >
                                 Add to Cart
                             </button>

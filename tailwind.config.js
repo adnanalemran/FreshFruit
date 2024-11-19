@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -7,8 +9,8 @@ export default {
 
     extend: {
       colors: {
-        primary: "#1C8593",
-        secondary: "#80CAEE",
+        primary: "#FF6565",
+        secondary: "#FBBD2C",
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
@@ -239,6 +241,10 @@ export default {
         "spin-1.5": "spin 1.5s linear infinite",
         "spin-2": "spin 2s linear infinite",
         "spin-3": "spin 3s linear infinite",
+      },
+      fontFamily: {
+        quicksand: ["Quicksand", ...defaultTheme.fontFamily.sans],
+        exo2: ["Exo 2", ...defaultTheme.fontFamily.sans],
       },
     },
   },

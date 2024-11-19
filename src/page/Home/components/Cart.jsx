@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, increaseQuantity, decreaseQuantity } from "../../../redux/cartSlice";
 import { ImageUrl } from '../../../utils/ImageUrl';
 import { Link } from "react-router-dom";
+import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
 const Cart = () => {
     const cart = useSelector(state => state.cart); // Redux state
@@ -42,10 +43,10 @@ const Cart = () => {
                 <div className="space-y-4">
                     {cart.map((item) => (
                         <div key={item.id} className="flex items-center justify-between   bg-slate-200 rounded-lg px-2">
-                            <li className="flex flex-col py-4 sm:flex-row justify-between w-full ">
+                            <li className="flex flex-col pt-3 pb-1 sm:flex-row justify-between w-full ">
                                 <div className="flex w-full space-x-2 sm:space-x-4 ">
                                     <img
-                                        className="flex-shrink-0 object-cover w-20 h-20 dark:border- rounded outline-none sm:w-32 sm:h-32 dark:bg-slate-500"
+                                        className="flex-shrink-0 object-contain bg-white max-w-22 max-h-22 dark:border- rounded outline-none sm:w-32 sm:h-32 dark:bg-slate-500"
                                         src={`${ImageUrl}${item?.image}`} alt={item?.name}
                                     />
                                     <div className="flex flex-col justify-between w-full pb-4">
@@ -53,34 +54,34 @@ const Cart = () => {
                                             <div className="space-y-1">
                                                 <h3 className="text-lg font-semibold leading-snug sm:pr-8">{item?.name}</h3>
                                                 <p className="text-sm">
-                                                    {item?.description.split(' ').slice(0, 7).join(' ')}...
+                                                    <p className="text-xs whitespace-nowrap  ">Unit Price: ${item?.price.toFixed(2)}</p>
                                                 </p>
 
                                             </div>
                                             <div className="text-right">
                                                 {/* Display unit price and total price */}
                                                 <p className="text-lg font-semibold">${(item?.quantity * item?.price).toFixed(2)}</p>
-                                                <p className="text-xs whitespace-nowrap  ">Unit Price: ${item?.price.toFixed(2)}</p>
+
                                             </div>
                                         </div>
-                                        <div className="flex text-sm divide-x justify-end  ">
+                                        <div className="flex text-sm   justify-end  pl-3">
 
-                                            <div className="flex items-center gap-4">
+                                            <div className="flex items-center gap-3">
                                                 <button
                                                     onClick={() => handleDecreaseQuantity(item.id)}
-                                                    className="px-1 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
+                                                    className="  py-1 text-secondary hover:text-yellow-600   text-xl rounded-full"
                                                 >
-                                                    -
+                                                    <FaMinusCircle />
                                                 </button>
                                                 <span className="font-semibold text-lg">{item?.quantity}</span>
                                                 <button
                                                     onClick={() => handleIncreaseQuantity(item.id)}
-                                                    className="px-1 py-1 mr-4 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
+                                                    className="py-1 text-secondary hover:text-yellow-600  text-xl rounded-full"
                                                 >
-                                                    +
+                                                    <FaPlusCircle />
                                                 </button>
                                             </div>
-                                            <button onClick={() => handleRemoveFromCart(item.id)} type="button" className=" flex items-center pl-5 py-1  space-x-1">
+                                            <button onClick={() => handleRemoveFromCart(item.id)} type="button" className=" text-primary flex items-center justify-center gap-1 pl-5 py-1  ">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4 fill-current">
                                                     <path d="M96,472a23.82,23.82,0,0,0,23.579,24H392.421A23.82,23.82,0,0,0,416,472V152H96Zm32-288H384V464H128Z"></path>
                                                     <rect width="32" height="200" x="168" y="216"></rect>
@@ -103,16 +104,19 @@ const Cart = () => {
                 {cart.length === 0 ? (
                     <p className="text-center text-slate-600 dark:text-slate-400"></p>
                 ) : (
-                    <div className="space-y-2">
-                        <div className="flex justify-between  my-4">
-                            <p className="text-lg font-semibold">Total Price:</p>
-                            <p className="text-lg font-semibold">${getTotalPrice().toFixed(2)}</p>
+                    <div className="space-y-2 w-full border-t border-dashed border-primary">
+                        <div className="flex justify-between  my-4 w-full ">
+                            <p className="text-lg font-semibold text-primary">Total Price:</p>
+                            <p className="text-lg font-semibold text-green-500">${getTotalPrice().toFixed(2)}</p>
                         </div>
-                        <Link to='/order-and-payment'>
-                            <button className="py-2 px-6 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-95000 transition duration-300">
-                                Proceed to Checkout
-                            </button>
-                        </Link>
+                        <div className="flex  w-full">
+                            <Link className="w-full" to='/order-and-payment'>
+                                <button className="py-2 px-6 bg-primary w-full text-white font-semibold rounded-lg hover:bg-slate-95000 transition duration-300 whitespace-nowrap  shadow-2 drop-shadow-2xl  ">
+                                    Place order
+                                </button>
+                            </Link>
+                        </div>
+
                     </div>
                 )}
             </div>

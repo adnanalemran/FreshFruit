@@ -93,7 +93,7 @@ const CheckoutForm = ({ userDetails, cart, onSuccess }) => {
 
     return (
         <form className="bg-slate-100 p-6 rounded-xl my-8" onSubmit={handleSubmit}>
-            <h3 className="text-lg font-semibold text-neutral-700 pt-4">Payment Information</h3>
+            <h3 className="text-2xl font-semibold text-neutral-700 pt-4">Payment Information</h3>
             <hr className="my-4 border-neutral-200" />
 
             {/* User Information Section */}

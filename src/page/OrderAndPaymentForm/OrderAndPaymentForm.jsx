@@ -19,9 +19,9 @@ const OrderAndPayment = () => {
     }, []);
 
     return (
-        <div className="flex w-full container mx-auto ">
+        <div className="flex w-full   ">
 
-            <div className="lg:w-1/2"> <OrderSummary userDetails={userDetails} setUserDetails={setUserDetails} cart={cart} />
+            <div className="lg:w-1/2  bg-slate-100 h-[100vh] "> <OrderSummary userDetails={userDetails} setUserDetails={setUserDetails} cart={cart} />
             </div>
             <div className="lg:w-1/2">
                 <PaymentForm userDetails={userDetails} cart={cart} /></div>

@@ -9,10 +9,9 @@ const OrderSummary = ({ cart }) => {
     };
 
     return (
-        <div className="  mx-auto p-6">
-            <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">Order Summary</h2>
+        <div className=" bg-white   h-[80vh]     mx-16 p-12 my-10">
+            <h2 className="text-3xl font-semibold   mb-6">Order Summary</h2>
 
-            {/* User Information */}
 
 
             {/* Cart Items */}
@@ -35,6 +34,17 @@ const OrderSummary = ({ cart }) => {
                     <span>{`$${calculateTotal().toFixed(2)}`}</span>
                 </div>
             </div>
+
+            <p className='mt-10'>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Terms and Conditions</h3>
+                <p className="text-gray-600 text-sm">
+                    By placing an order, you agree to our terms and conditions. All sales are final and non-refundable.
+                    Prices and availability of products are subject to change without notice. We reserve the right to
+                    refuse service to anyone for any reason at any time. Your use of our service is at your sole risk.
+                    We do not guarantee that our service will be uninterrupted, timely, secure, or error-free.
+                </p>
+            </p>
+
         </div>
     );
 };

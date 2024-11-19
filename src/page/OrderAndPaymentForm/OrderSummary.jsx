@@ -16,7 +16,7 @@ const OrderSummary = ({ cart }) => {
 
             {/* Cart Items */}
             <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Cart Items</h3>
+                <h3 className="lg:text-xl  font-semibold text-gray-800 mb-4">Cart Items</h3>
                 <ul>
                     {cart?.map((item) => (
                         <li key={item.id} className="flex justify-between mb-2">
@@ -28,14 +28,14 @@ const OrderSummary = ({ cart }) => {
             </div>
 
             {/* Total */}
-            <div className="mt-4 border-t pt-4">
-                <div className="flex justify-between text-lg font-semibold">
+            <div className="lg:mt-4 border-t pt-4">
+                <div className="flex justify-between lg:text-lg font-semibold">
                     <span>Total:</span>
                     <span>{`$${calculateTotal().toFixed(2)}`}</span>
                 </div>
             </div>
 
-            <p className='mt-10'>
+            <p className='lg:mt-10 mt-5'>
                 <h3 className="text-lg lg:text-xl font-semibold text-gray-800 mb-4">Terms and Conditions</h3>
                 <p className="text-gray-600 lg:text-sm text-xs">
                     By placing an order, you agree to our terms and conditions. All sales are final and non-refundable.

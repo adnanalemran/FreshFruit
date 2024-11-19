@@ -1,5 +1,7 @@
 
+import { IoCartOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
+import Cart from '../../page/Home/components/Cart';
 
 const Header = () => {
     return (
@@ -13,8 +15,14 @@ const Header = () => {
 
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <div className="dropdown dropdown-bottom dropdown-end">
+                        <div tabIndex={0} role="button" className="btn m-1"><IoCartOutline className="text-2xl" /></div>
+                        <div tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1]   p-2 shadow">
+                            <Cart />
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     );

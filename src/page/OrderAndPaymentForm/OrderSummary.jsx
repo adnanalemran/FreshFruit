@@ -9,8 +9,8 @@ const OrderSummary = ({ cart }) => {
     };
 
     return (
-        <div className=" bg-white   h-[80vh]     mx-16 p-12 my-10">
-            <h2 className="text-3xl font-semibold   mb-6">Order Summary</h2>
+        <div className=" bg-white   h-[80vh]     lg:mx-16 p-12 my-10">
+            <h2 className="lg:text-3xl text-xl font-semibold   mb-6">Order Summary</h2>
 
 
 
@@ -36,8 +36,8 @@ const OrderSummary = ({ cart }) => {
             </div>
 
             <p className='mt-10'>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Terms and Conditions</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="text-lg lg:text-xl font-semibold text-gray-800 mb-4">Terms and Conditions</h3>
+                <p className="text-gray-600 lg:text-sm text-xs">
                     By placing an order, you agree to our terms and conditions. All sales are final and non-refundable.
                     Prices and availability of products are subject to change without notice. We reserve the right to
                     refuse service to anyone for any reason at any time. Your use of our service is at your sole risk.

@@ -137,13 +137,21 @@ const CheckoutForm = ({ userDetails, cart, onSuccess }) => {
             <div className="mt-6">
                 <label className="block text-sm text-neutral-500">Card Info:</label>
                 <div className="p-2 bg-neutral-50 rounded-lg border border-neutral-200 my-4">
-                    <CardElement options={{ style: { base: { fontSize: "18px", color: "#333" }, invalid: { color: "#fa755a" } } }} />
+                    <CardElement
+                        options={{
+                            style: {
+                                base: { fontSize: "18px", color: "#333" },
+                                invalid: { color: "#FF6565" },
+                            },
+                        }}
+                    />
+
                 </div>
             </div>
 
             <button
                 type="submit"
-                className={`w-full px-5 py-2.5 rounded-lg text-sm text-white ${loading ? "bg-neutral-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 active:scale-95"}`}
+                className={`w-full px-5 py-2.5 rounded-lg text-sm text-white ${loading ? "bg-neutral-400 cursor-not-allowed" : "bg-primary hover:bg-red-500 active:scale-95"}`}
                 disabled={!stripe || loading}
             >
                 {loading ? "Processing..." : "Pay Now"}

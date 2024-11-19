@@ -19,7 +19,7 @@ const OrderAndPayment = () => {
     }, []);
 
     return (
-        <div className="flex w-full   ">
+        <div className="flex lg:flex-row flex-col w-full   ">
 
             <div className="lg:w-1/2  bg-slate-100 h-[100vh] "> <OrderSummary userDetails={userDetails} setUserDetails={setUserDetails} cart={cart} />
             </div>

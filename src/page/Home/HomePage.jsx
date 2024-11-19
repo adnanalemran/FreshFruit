@@ -11,13 +11,12 @@ const HomePage = () => {
             </Helmet>
 
             <div className="grid gap-4 grid-cols-12 min-h-[100vh]  w-full lg:px-6 px-4">
-                <div className=" col-span-8 ">
+                <div className=" lg:col-span-8 col-span-12 ">
                     <ProductView />
                 </div>
-                <div className="col-span-4 ">
+                <div className="lg:col-span-4  lg:flex hidden">
                     <Cart />
                 </div>
-
 
 
             </div>

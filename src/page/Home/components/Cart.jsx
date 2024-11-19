@@ -34,7 +34,7 @@ const Cart = () => {
                     <li className="flex flex-col py-4 sm:flex-row justify-between w-full ">
                         <div className="flex w-full space-x-2 sm:space-x-4 h-20 ">
 
-                            <h3>Card Is Empty</h3>
+                            <h3 className="font-bold text-slate-600">Card Is Empty</h3>
 
                         </div>
                     </li>
@@ -46,7 +46,7 @@ const Cart = () => {
                             <li className="flex flex-col pt-3 pb-1 sm:flex-row justify-between w-full ">
                                 <div className="flex w-full space-x-2 sm:space-x-4 ">
                                     <img
-                                        className="flex-shrink-0 object-contain bg-white max-w-22 max-h-22 dark:border- rounded outline-none sm:w-32 sm:h-32 dark:bg-slate-500"
+                                        className="flex-shrink-0 object-contain bg-white max-w-22 max-h-22 dark:border- rounded outline-none sm:w-32 sm:h-32 "
                                         src={`${ImageUrl}${item?.image}`} alt={item?.name}
                                     />
                                     <div className="flex flex-col justify-between w-full pb-4">

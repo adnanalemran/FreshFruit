@@ -9,7 +9,7 @@ const OrderSummary = ({ cart }) => {
     };
 
     return (
-        <div className=" bg-white   h-[80vh]     lg:mx-16 p-12 my-10">
+        <div className=" bg-white   lg:h-[80vh]     lg:mx-16 p-12 my-10">
             <h2 className="lg:text-3xl text-xl font-semibold   mb-6">Order Summary</h2>
 
 

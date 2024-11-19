@@ -1,10 +1,10 @@
 import axios from "axios";
 
 //  Development Url
-const baseURL = "http://localhost:8000/api/v1";
+// const baseURL = "http://localhost:8000/api/v1";
 
 //  Production Url
-// const baseURL = 'https://bestthaideal.elegantinternational.site/public/api/v1';
+const baseURL = 'https://test.hrbee.xyz/public/api/v1';
 
 const http = axios.create({
   baseURL,

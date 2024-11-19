@@ -17,7 +17,7 @@ const Header = () => {
                 <div className="navbar-end">
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div tabIndex={0} role="button" className="btn m-1"><IoCartOutline className="text-2xl" /></div>
-                        <div tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1]   p-2 shadow">
+                        <div tabIndex={0} className="dropdown-content       z-[10]    rounded-lg  w-96  ">
                             <Cart />
                         </div>
                     </div>

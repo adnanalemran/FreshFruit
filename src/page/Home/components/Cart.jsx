@@ -26,7 +26,7 @@ const Cart = () => {
     };
 
     return (
-        <div className="  mx-auto p-6 bg-slate-100  rounded-lg min-w-100">
+        <div className="  mx-auto p-6 bg-slate-100   rounded-2xl min-w-100 border border-slate-400  lg:border-none ">
             <h2 className="text-xl lg:text-2xl font-semibold text-slate-800 mb-6">Your Cart</h2>
 
             {cart.length === 0 ? (
@@ -42,7 +42,7 @@ const Cart = () => {
             ) : (
                 <div className="space-y-4">
                     {cart.map((item) => (
-                        <div key={item.id} className="flex items-center justify-between   bg-slate-200 rounded-lg px-2">
+                        <div key={item.id} className="flex items-center justify-between  rounded-2xl  bg-slate-200 lg:rounded-lg  px-2">
                             <li className="flex flex-col pt-3 pb-1 sm:flex-row justify-between w-full ">
                                 <div className="flex w-full space-x-2 sm:space-x-4 ">
                                     <img

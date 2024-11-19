@@ -47,7 +47,7 @@ const ProductView = () => {
             ) : products.length === 0 ? (
                 <div className="text-center text-gray-600">No products found</div>
             ) : (
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-6">
                     {products.map((product) => (
                         <div
                             key={product.id}
@@ -65,7 +65,7 @@ const ProductView = () => {
                             <p className="text-base font-semibold text-center">  ${parseFloat(product?.price).toFixed(2)}</p>
                             <button
                                 onClick={() => handleAddToCart(product)}
-                                className=" text-sm lg:mt-4 mt-2 w-full lg:py-2 py-1 bg-primary text-white lg:font-semibold rounded-md hover:bg-red-500 transition duration-300"
+                                className=" text-sm lg:mt-4 mt-2 w-full  py-2   bg-primary text-white lg:font-semibold rounded-md hover:bg-red-500 transition duration-300"
                             >
                                 Add to Cart
                             </button>
